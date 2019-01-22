@@ -5,10 +5,14 @@ from Crypto.Cipher import AES
 import codecs
 
 key = open('aes_key.hex').read()
+print key
+
 iv = open('aes_iv.hex').read()
 cipher = open('aes_ciphertext.hex').read()
 
 key = codecs.decode(key, 'hex')
+print key
+
 iv = codecs.decode(iv, 'hex')
 cipher = codecs.decode(cipher, 'hex')
 
