@@ -10,10 +10,13 @@ string2 = open('3.1_perturbed_string.txt').read()
 hex1 = int(SHA256.new(string1).hexdigest(), 16)
 hex2 = int(SHA256.new(string2).hexdigest(), 16)
 	
-hamming = hex(bin(hex1 ^ hex2)[2:].count('1'))[2:]
-print 'Hamming Distance : ', hamming
+hamming = hex(bin(hex1 ^ hex2)[2:].count('1'))[2 : ]
+print 'Hamming Distance (0x) :', hamming
 
-hamming = codecs.encode(hamming, 'hex')
+hamming = int(hamming, 16)
+print 'Hamming Distance (Decimal) :', hamming
+
+hamming = codecs.encode(str(hamming), 'hex')
 
 output_file = open('solution31.hex', 'w')
 output_file.write(hamming)
