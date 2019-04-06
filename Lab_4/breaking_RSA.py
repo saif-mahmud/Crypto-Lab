@@ -3,7 +3,7 @@ from decimal import *
 import math
 import sys
 
-sys.setrecursionlimit(1500)
+sys.setrecursionlimit(2500)
 
 def bigmod(m, e, n):
     if e == 0:
@@ -23,22 +23,22 @@ def bigmod(m, e, n):
 
 
 
-ciphertext = open("4.3_ciphertext.hex", "r").read()
+ciphertext = open("4.3_ciphertext.txt", "r").read()
 print 'Ciphertext (from File):', ciphertext, '\n'
 
-e = open("4.4_public_key.hex", "r").read()
+e = open("4.4_public_key.txt", "r").read()
 print 'e (from File)=', e, '\n'
 
-n = open("4.5_modulo.hex", "r").read()
+n = open("4.5_modulo.txt", "r").read()
 print 'n (from File)=', n, '\n'
 
-ciphertext = int(ciphertext, 16)
+ciphertext = int(ciphertext)
 print 'Ciphertext :', ciphertext, '\n'
 
-e = int(e, 16)
+e = int(e,16)
 print 'e =', e, '\n'
 
-n = int(n, 16)
+n = int(n,16)
 print 'n =', n, '\n'
 
 d = 1
@@ -92,8 +92,13 @@ def is_upto_this_approximation_valid(fractional_parts):
     if ((-b+math.sqrt(Decimal(discriminant)))/2) % 1 != 0 or ((-b-math.sqrt(Decimal(discriminant)))/2) % 1 != 0:
         return False
 
-    #print bigmod(ciphertext, d, n)
-    
+    print bigmod(ciphertext, d, n)
+    p=(-b+math.sqrt(Decimal(discriminant)))/2
+    q=(-b-math.sqrt(Decimal(discriminant)))/2
+    print p
+    print q
+    if (e*d)%phi==1:
+        print "modular inverse"
     return True
 
 euclidContinuedFraction(n, e)
@@ -101,18 +106,32 @@ euclidContinuedFraction(n, e)
 
 print 'Wiener\'s Attack : \n'
 
-print 'd =', d, '\n'
+#print 'd =', d, '\n'
 
-deciphered_text = bigmod(ciphertext, d, n)
-print 'Deciphered Text :', deciphered_text, '\n'
+#deciphered_text = bigmod(ciphertext, d, n)
+#print 'Deciphered Text :', deciphered_text, '\n'
 
-print 'Verification : '
+def extended_euclid(a, b) :
+    if b == 0 :
+        return (1, 0, a)
+    x, y, d = extended_euclid(b, a % b)
 
-test_plaintext = 10101010103
-print 'Test Plaintext :', test_plaintext, '\n'
+    return (y, (x - math.floor(a / b) * y), d) 
 
-test_cipher = bigmod(test_plaintext, e, n)
-print 'Encryption :', test_cipher, '\n'
+def modular_inv (b, n) :
+    x, y, gcd = extended_euclid(b, n)
 
-deciphered_verification = bigmod(test_cipher, d, n)
-print 'Decryption :', deciphered_verification, '\n'
+    if gcd == 1 :
+        return x % n
+
+#print 'Verification : '
+#v = modular_inv()
+
+# test_plaintext = 10101010103
+# print 'Test Plaintext :', test_plaintext, '\n'
+
+# test_cipher = bigmod(test_plaintext, e, n)
+# print 'Encryption :', test_cipher, '\n'
+
+# deciphered_verification = bigmod(test_cipher, d, n)
+# print 'Decryption :', deciphered_verification, '\n'
