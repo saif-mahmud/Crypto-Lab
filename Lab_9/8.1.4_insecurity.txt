@@ -1,0 +1,37 @@
+In communication with facebook.com server the API Key is transmitted over insecure channel and thus is exposed
+to everyone. This API Key is used to authenticate the browser and therefore it can be used to authenthicate
+any other browser from the intruder end. 
+
+
+Hypertext Transfer Protocol
+     [truncated]GET /plugins/like.php?api_key=116663708370869&channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D11%23cb%3Df1e9b3f%26origin%3Dhttp%253A%252F%252Fwww.aljazeera.com%252Ff388f9dcec%26domain%3Dw
+        [ [truncated]Expert Info (Chat/Sequence): GET /plugins/like.php?api_key=116663708370869&channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D11%23cb%3Df1e9b3f%26origin%3Dhttp%253A%252F%252Fwww.aljazeera.co]
+        Request Method: GET
+        Request URI [truncated]: /plugins/like.php?api_key=116663708370869&channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D11%23cb%3Df1e9b3f%26origin%3Dhttp%253A%252F%252Fwww.aljazeera.com%252Ff388f9dcec%26d
+            Request URI Path: /plugins/like.php
+            Request URI Query [truncated]: api_key=116663708370869&channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D11%23cb%3Df1e9b3f%26origin%3Dhttp%253A%252F%252Fwww.aljazeera.com%252Ff388f9dcec%26domain%3Dwww.
+                Request URI Query Parameter: api_key=116663708370869
+                Request URI Query Parameter [truncated]: channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D11%23cb%3Df1e9b3f%26origin%3Dhttp%253A%252F%252Fwww.aljazeera.com%252Ff388f9dcec%26domain%3Dwww.aljazeera.com%
+                Request URI Query Parameter: colorscheme=light
+                Request URI Query Parameter: extended_social_context=false
+                Request URI Query Parameter: href=http%3A%2F%2Fwww.aljazeera.com%2Fnews%2Famericas%2F2012%2F10%2F20121082737435876.html
+                Request URI Query Parameter: layout=button_count
+                Request URI Query Parameter: locale=en_GB
+                Request URI Query Parameter: node_type=link
+                Request URI Query Parameter: sdk=joey
+                Request URI Query Parameter: show_faces=false
+                Request URI Query Parameter: width=90
+        Request Version: HTTP/1.1
+    Host: www.facebook.com\r\n
+    Connection: keep-alive\r\n
+    User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_1) AppleWebKit/537.4 (KHTML, like Gecko) Chrome/22.0.1229.79 Safari/537.4\r\n
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\n
+    Referer: http://www.aljazeera.com/news/americas/2012/10/20121082737435876.html\r\n
+    Accept-Encoding: gzip,deflate,sdch\r\n
+    Accept-Language: en-US,en;q=0.8\r\n
+    Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.3\r\n
+    \r\n
+    [Full request URI [truncated]: http://www.facebook.com/plugins/like.php?api_key=116663708370869&channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D11%23cb%3Df1e9b3f%26origin%3Dhttp%253A%252F%252Fwww.alja]
+    [HTTP request 5/5]
+    [Prev request in frame: 13046]
+    [Response in frame: 14071]

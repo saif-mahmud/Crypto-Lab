@@ -1,0 +1,2 @@
+1. Use TLSv1.1 for secure connection in order to share API Key
+2. Authenticate specific browser of user end with hashed tokens 

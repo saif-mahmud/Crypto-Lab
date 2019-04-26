@@ -1,0 +1,1 @@
+STROUT-PC<00>: type NB, class IN

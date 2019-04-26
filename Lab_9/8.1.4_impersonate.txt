@@ -1,0 +1,2 @@
+The intruder can use the API Key transmitted through insecure channel and can create his own GET request
+impersonating the actual user through putting this key value in request. 

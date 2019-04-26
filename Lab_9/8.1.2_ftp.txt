@@ -1,0 +1,2 @@
+Active FTP. Because the client sent PORT command to FTP Server and thus data transfer channel was initiated
+by the server.
